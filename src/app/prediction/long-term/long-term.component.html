@@ -1,0 +1,28 @@
+<div class="main">
+  <div class="data">
+    <div class="file_upload">
+        <input  type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx">
+  <mat-form-field class="number">
+      <input type="number" placeholder="на скільки років?" [(ngModel)]="year"  matInput>
+    </mat-form-field></div>
+    <div class="instruction">
+      <button (click)="openDialog()">Інструкція</button>
+    </div>
+  </div>
+  <button type="button" class="btn btn-info" (click)="ordinarMethod(year)" >Звичайний метод</button>
+  <button (click)="Upload(year)">Компонентний метод</button>
+  <div class="component" *ngIf="component">
+    <app-method-component-long [data]="data_tosend"></app-method-component-long>
+  </div>
+  <div *ngIf="ordinar">
+      <button  (click)="Upload(year)" class="prognos">ПРОГНОЗ</button>
+      <div  class="result">
+          <div id="chartdiv" style="width: 75%; height: 600px;"></div>
+        <div class="result-text" *ngIf="showResult">
+          <div *ngFor="let res of new_ar">
+            <span>{{res.year}}</span> - <span>{{res.value}}</span>
+          </div>
+        </div>
+        </div>
+  </div>
+  </div>

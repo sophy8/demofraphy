@@ -1,0 +1,20 @@
+.method{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.prognos{
+    margin-top: 30px;
+    border: 2px solid #4EC8C1;
+    background: rgba($color: #FFFFFF, $alpha: 0.6);
+    font-weight: bold;
+    font-size: 24px;
+    color: #4EC8C1;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.result-text{
+    font-size: 24px;
+    color: #4EC8C1;
+}

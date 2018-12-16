@@ -1,0 +1,33 @@
+<div class="all-content">
+<div class="main">
+<p class="title">Статева піраміда</p>
+<input  type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx">
+<button  (click)="Upload()" class="prognos">ПРОГНОЗ</button>
+<p class="title">Навантаження віковими групами</p>
+<input  type="file" style="display: inline-block;" (change)="incomingfile2($event)" placeholder="Upload file" accept=".xlsx">
+<button  (click)="Upload2()" class="prognos">ПРОГНОЗ</button></div>
+<div class="instruction">
+    <button (click)="openDialog()">Інструкція</button>
+  </div>
+</div>
+<div *ngIf="piramida">
+<div id="chartdiv" style="width: 100%; height: 600px;"></div>
+</div>
+<div *ngIf="diagrama" class="result">
+  <div id="chart" style="width: 75%; height: 600px;"></div>
+  <div class="results">
+    <p>Кількість кожної вікової групи</p>
+    <div *ngFor="let i of array">
+      <div>{{i.name}}</div>
+      <div>{{i.points}}</div>
+    </div>
+    <p>Частки дітей, старших та найстарших відповідно:</p>
+    <div *ngFor="let i of part_of_people">
+<div> - {{i}}</div>
+    </div>
+    <p>Коефіцієнт Навантаження</p>
+    <div>pагальний {{this.generakKoeficient}}</div>
+    <div>lітьми {{this.childKoeficient}}</div>
+    <div>cтаршими {{this.oldKoeficient}}</div>
+  </div>
+  </div>

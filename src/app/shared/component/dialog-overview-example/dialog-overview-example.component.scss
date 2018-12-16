@@ -1,0 +1,25 @@
+::ng-deep .cdk-overlay-pane{
+    width: 500px!important;
+}
+::ng-deep .mat-dialog-container{
+    height: 100vh;
+}
+button{
+    margin-top: 20px;
+    border: 2px solid #4EC8C1;
+    background: rgba($color: #FFFFFF, $alpha: 0.6);
+    font-weight: bold;
+    font-size: 18px;
+    color: #4EC8C1;
+    margin-left: 43px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.navan{
+    height: 126px;
+    width: 257px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

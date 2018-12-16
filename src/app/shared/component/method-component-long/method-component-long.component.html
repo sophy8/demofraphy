@@ -1,0 +1,10 @@
+<button class="prognos" (click)="prediction()">ПРОГНОЗ</button>
+<div class="method">
+<div id="component" style="width: 75%; height: 600px;"></div>
+<div class="result-text" *ngIf="showResult">
+  <div *ngFor="let res of array">
+    <span>{{res.year}}</span> - <span>{{res.value}}</span>
+  </div>
+</div>
+</div>
+
